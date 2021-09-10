@@ -7,16 +7,16 @@
 public class Ex06 {
     public static void main(String[] args) {
         int vetor[] = new int[] { 23, 45, 67 };
-        imprimeVetor(vetor, vetor.length-1);
+        imprimeVetor(vetor, 0);
     }
 
     public static void imprimeVetor(int[] vetor, int tamanho){
-        if (tamanho == 0) {
-            System.out.print(vetor[0] + " ");
+        if (tamanho == vetor.length-1) {
+            System.out.print(vetor[tamanho] + " ");
             return;
         }else{
             System.out.print(vetor[tamanho] + " ");
-            imprimeVetor(vetor, tamanho - 1);
+            imprimeVetor(vetor, tamanho + 1);
         }
       
         
